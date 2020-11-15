@@ -44,10 +44,7 @@ pipeline {
 					branch 'master'
 			}
 			steps {
-				input {
-						message 'PreProd all ok'
-						ok 'okProceedla'
-					}
+				input 'PreProd all ok'
 				withCredentials([usernamePassword(credentialsId: 'webserver_login', passwordVariable: 'passwordvariable', usernameVariable: 'usernamevariable')]) {
 					sshPublisher (
 						failOnError: true, 
