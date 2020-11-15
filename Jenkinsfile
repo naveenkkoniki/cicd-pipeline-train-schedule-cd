@@ -45,7 +45,7 @@ pipeline {
 			}
 			steps {
 				input {
-						message 'PreProd all ok?'
+						message 'PreProd all ok'
 						ok 'okProceedla'
 					}
 				withCredentials([usernamePassword(credentialsId: 'webserver_login', passwordVariable: 'passwordvariable', usernameVariable: 'usernamevariable')]) {
